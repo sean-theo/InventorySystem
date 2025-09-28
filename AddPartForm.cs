@@ -20,7 +20,6 @@ namespace InventorySystem
         {
 
         }
-
         private void rbtnInHouse_CheckedChanged(object sender, EventArgs e)
         {
             if (rbtnInHouse.Checked)
@@ -28,7 +27,6 @@ namespace InventorySystem
                 lblDynamic.Text = "Machine ID";
             }
         }
-
         private void rbtnOutsourced_CheckedChanged(object sender, EventArgs e)
         {
             if (rbtnOutsourced.Checked)
@@ -36,12 +34,10 @@ namespace InventorySystem
                 lblDynamic.Text = "Company Name";
             }
         }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             string name = txtName.Text;

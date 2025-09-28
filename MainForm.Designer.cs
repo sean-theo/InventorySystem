@@ -111,6 +111,7 @@
             this.btnDeletePart.TabIndex = 7;
             this.btnDeletePart.Text = "Delete";
             this.btnDeletePart.UseVisualStyleBackColor = true;
+            this.btnDeletePart.Click += new System.EventHandler(this.btnDeletePart_Click);
             // 
             // lblProducts
             // 
@@ -163,6 +164,7 @@
             this.btnModifyPart.TabIndex = 13;
             this.btnModifyPart.Text = "Modify";
             this.btnModifyPart.UseVisualStyleBackColor = true;
+            this.btnModifyPart.Click += new System.EventHandler(this.btnModifyPart_Click);
             // 
             // btnModifyProduct
             // 

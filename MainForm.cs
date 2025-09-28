@@ -62,5 +62,20 @@ namespace InventorySystem
             AddPartForm addPartForm = new AddPartForm();
             addPartForm.ShowDialog();
         }
+
+        private void btnModifyPart_Click(object sender, EventArgs e)
+        {
+            if (dgvParts.CurrentRow != null && dgvParts.CurrentRow.DataBoundItem is Part partToModify)
+            {
+                ModifyPartForm modifyPartForm = new ModifyPartForm(partToModify);
+                modifyPartForm.ShowDialog();
+                dgvParts.Refresh();
+            }
+            
+            else
+            {
+                MessageBox.Show("Please select a part to modify.");
+            }
+        }
     }
 }

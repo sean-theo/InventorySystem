@@ -157,7 +157,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(479, 407);
+            this.btnCancel.Location = new System.Drawing.Point(479, 423);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 10;
@@ -167,7 +167,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(382, 407);
+            this.btnSave.Location = new System.Drawing.Point(383, 423);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 11;
@@ -178,7 +178,7 @@
             // txtID
             // 
             this.txtID.Enabled = false;
-            this.txtID.Location = new System.Drawing.Point(257, 73);
+            this.txtID.Location = new System.Drawing.Point(290, 73);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(100, 20);
@@ -186,35 +186,35 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(257, 122);
+            this.txtName.Location = new System.Drawing.Point(290, 122);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 13;
             // 
             // txtInventory
             // 
-            this.txtInventory.Location = new System.Drawing.Point(257, 173);
+            this.txtInventory.Location = new System.Drawing.Point(290, 173);
             this.txtInventory.Name = "txtInventory";
             this.txtInventory.Size = new System.Drawing.Size(100, 20);
             this.txtInventory.TabIndex = 14;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(257, 230);
+            this.txtPrice.Location = new System.Drawing.Point(290, 230);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(100, 20);
             this.txtPrice.TabIndex = 15;
             // 
             // txtMin
             // 
-            this.txtMin.Location = new System.Drawing.Point(257, 280);
+            this.txtMin.Location = new System.Drawing.Point(290, 284);
             this.txtMin.Name = "txtMin";
             this.txtMin.Size = new System.Drawing.Size(100, 20);
             this.txtMin.TabIndex = 16;
             // 
             // txtMax
             // 
-            this.txtMax.Location = new System.Drawing.Point(257, 333);
+            this.txtMax.Location = new System.Drawing.Point(290, 333);
             this.txtMax.Name = "txtMax";
             this.txtMax.Size = new System.Drawing.Size(100, 20);
             this.txtMax.TabIndex = 17;
@@ -222,7 +222,7 @@
             // 
             // txtDynamic
             // 
-            this.txtDynamic.Location = new System.Drawing.Point(257, 377);
+            this.txtDynamic.Location = new System.Drawing.Point(290, 382);
             this.txtDynamic.Name = "txtDynamic";
             this.txtDynamic.Size = new System.Drawing.Size(100, 20);
             this.txtDynamic.TabIndex = 18;
