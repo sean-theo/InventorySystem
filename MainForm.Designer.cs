@@ -57,7 +57,6 @@
             this.lblTitle.Size = new System.Drawing.Size(335, 25);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Inventory Management System";
-            this.lblTitle.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblParts
             // 
@@ -68,7 +67,6 @@
             this.lblParts.Size = new System.Drawing.Size(51, 24);
             this.lblParts.TabIndex = 1;
             this.lblParts.Text = "Parts";
-            this.lblParts.Click += new System.EventHandler(this.lblParts_Click);
             // 
             // txtSearchParts
             // 
@@ -103,6 +101,7 @@
             this.btnAddPart.TabIndex = 5;
             this.btnAddPart.Text = "Add";
             this.btnAddPart.UseVisualStyleBackColor = true;
+            this.btnAddPart.Click += new System.EventHandler(this.btnAddPart_Click);
             // 
             // btnDeletePart
             // 
@@ -122,7 +121,6 @@
             this.lblProducts.Size = new System.Drawing.Size(84, 24);
             this.lblProducts.TabIndex = 8;
             this.lblProducts.Text = "Products";
-            this.lblProducts.Click += new System.EventHandler(this.lblProducts_Click);
             // 
             // txtSearchProducts
             // 
@@ -192,6 +190,7 @@
             this.btnExit.TabIndex = 16;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // MainForm
             // 

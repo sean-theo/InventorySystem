@@ -47,24 +47,20 @@ namespace InventorySystem
             Inventory.Products.Add(toolbox);
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblParts_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblProducts_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtSearchParts_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnAddPart_Click(object sender, EventArgs e)
+        {
+            AddPartForm addPartForm = new AddPartForm();
+            addPartForm.ShowDialog();
         }
     }
 }
