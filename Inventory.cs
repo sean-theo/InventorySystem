@@ -31,7 +31,7 @@ namespace InventorySystem
         }
         public static bool DeletePart(Part part)
         {
-            return false;
+            return AllParts.Remove(part);
         }
         public static Part LookUpPart(int PartID)
         {

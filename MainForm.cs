@@ -32,7 +32,19 @@ namespace InventorySystem
                 MachineID = 123,
             };
 
+            Part nail = new InHouse()
+            {
+                PartID = 2,
+                Name = "Nail",
+                Price = 0.25m,
+                InStock = 100,
+                Min = 10,
+                Max = 500,
+                MachineID = 789,
+            };
+
             Inventory.AllParts.Add(screw);
+            Inventory.AllParts.Add(nail);
 
             Product toolbox = new Product()
             {
@@ -45,11 +57,6 @@ namespace InventorySystem
             };
 
             Inventory.Products.Add(toolbox);
-        }
-
-        private void txtSearchParts_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -74,7 +81,69 @@ namespace InventorySystem
             
             else
             {
-                MessageBox.Show("Please select a part to modify.");
+                MessageBox.Show(this, "Please select a part to modify.");
+            }
+        }
+        private void btnDeletePart_Click(object sender, EventArgs e)
+        {
+            if (dgvParts.CurrentRow != null && dgvParts.CurrentRow.DataBoundItem is Part partToDelete)
+            {
+                var confirmResult = MessageBox.Show(this, "Are you sure you want to delete this part?", "Confirm Delete", MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    Inventory.DeletePart(partToDelete);
+                }
+                else
+                {
+                }
+            }
+            else
+            {
+                MessageBox.Show(this, "Please select a part to delete.");
+            }
+        }
+
+        private void btnSearchParts_Click(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearchParts.Text.Trim().ToLower();
+
+            if (txtSearchParts.Text == "")
+            {
+                MessageBox.Show(this, "Please enter a search term.");
+                return;
+            }
+
+            if (int.TryParse(searchTerm, out int partID))
+            {
+                foreach (var part in Inventory.AllParts)
+                {
+                    if (part.PartID == partID)
+                    {
+                        dgvParts.ClearSelection();
+                        int rowIndex = Inventory.AllParts.IndexOf(part);
+                        dgvParts.Rows[rowIndex].Selected = true;
+                        return;
+                    }
+                   
+                }
+                dgvParts.ClearSelection();
+                MessageBox.Show(this, "Part not found.");
+                
+            }
+            else
+            {
+                foreach(var part in Inventory.AllParts)
+                {
+                    if (part.Name.ToLower().Contains(searchTerm))
+                    {
+                        dgvParts.ClearSelection();
+                        int rowIndex = Inventory.AllParts.IndexOf(part);
+                        dgvParts.Rows[rowIndex].Selected = true;
+                        return;
+                    }
+                }
+                dgvParts.ClearSelection();
+                MessageBox.Show(this, "Part not found.");
             }
         }
     }
