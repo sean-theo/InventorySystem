@@ -23,7 +23,6 @@ namespace InventorySystem
 
             Part screw = new InHouse()
             {
-                PartID = 1,
                 Name = "Screw",
                 Price = 0.25m,
                 InStock = 100,
@@ -34,7 +33,6 @@ namespace InventorySystem
 
             Part nail = new InHouse()
             {
-                PartID = 2,
                 Name = "Nail",
                 Price = 0.25m,
                 InStock = 100,
@@ -48,7 +46,6 @@ namespace InventorySystem
 
             Product toolbox = new Product()
             {
-                ProductID = 1,
                 Name = "Toolbox",
                 Price = 19.99m,
                 InStock = 15,
@@ -84,6 +81,7 @@ namespace InventorySystem
                 MessageBox.Show(this, "Please select a part to modify.");
             }
         }
+
         private void btnDeletePart_Click(object sender, EventArgs e)
         {
             if (dgvParts.CurrentRow != null && dgvParts.CurrentRow.DataBoundItem is Part partToDelete)
@@ -145,6 +143,12 @@ namespace InventorySystem
                 dgvParts.ClearSelection();
                 MessageBox.Show(this, "Part not found.");
             }
+        }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            AddProductForm addProductForm = new AddProductForm();
+            addProductForm.ShowDialog();
         }
     }
 }

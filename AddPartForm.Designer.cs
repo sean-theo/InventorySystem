@@ -66,7 +66,7 @@
             this.rbtnInHouse.Checked = true;
             this.rbtnInHouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnInHouse.Location = new System.Drawing.Point(223, 23);
-            this.rbtnInHouse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnInHouse.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnInHouse.Name = "rbtnInHouse";
             this.rbtnInHouse.Size = new System.Drawing.Size(98, 24);
             this.rbtnInHouse.TabIndex = 1;
@@ -80,7 +80,7 @@
             this.rbtnOutsourced.AutoSize = true;
             this.rbtnOutsourced.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnOutsourced.Location = new System.Drawing.Point(395, 23);
-            this.rbtnOutsourced.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnOutsourced.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnOutsourced.Name = "rbtnOutsourced";
             this.rbtnOutsourced.Size = new System.Drawing.Size(117, 24);
             this.rbtnOutsourced.TabIndex = 2;
@@ -168,7 +168,7 @@
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(639, 521);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 28);
             this.btnCancel.TabIndex = 10;
@@ -179,7 +179,7 @@
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(511, 521);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 28);
             this.btnSave.TabIndex = 11;
@@ -191,7 +191,7 @@
             // 
             this.txtID.Enabled = false;
             this.txtID.Location = new System.Drawing.Point(387, 90);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(132, 22);
@@ -200,7 +200,7 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(387, 150);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(132, 22);
             this.txtName.TabIndex = 13;
@@ -208,7 +208,7 @@
             // txtInventory
             // 
             this.txtInventory.Location = new System.Drawing.Point(387, 213);
-            this.txtInventory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtInventory.Margin = new System.Windows.Forms.Padding(4);
             this.txtInventory.Name = "txtInventory";
             this.txtInventory.Size = new System.Drawing.Size(132, 22);
             this.txtInventory.TabIndex = 14;
@@ -216,7 +216,7 @@
             // txtPrice
             // 
             this.txtPrice.Location = new System.Drawing.Point(387, 283);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(132, 22);
             this.txtPrice.TabIndex = 15;
@@ -224,7 +224,7 @@
             // txtMin
             // 
             this.txtMin.Location = new System.Drawing.Point(387, 350);
-            this.txtMin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMin.Margin = new System.Windows.Forms.Padding(4);
             this.txtMin.Name = "txtMin";
             this.txtMin.Size = new System.Drawing.Size(132, 22);
             this.txtMin.TabIndex = 16;
@@ -232,7 +232,7 @@
             // txtMax
             // 
             this.txtMax.Location = new System.Drawing.Point(387, 410);
-            this.txtMax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMax.Margin = new System.Windows.Forms.Padding(4);
             this.txtMax.Name = "txtMax";
             this.txtMax.Size = new System.Drawing.Size(132, 22);
             this.txtMax.TabIndex = 17;
@@ -240,7 +240,7 @@
             // txtDynamic
             // 
             this.txtDynamic.Location = new System.Drawing.Point(387, 470);
-            this.txtDynamic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDynamic.Margin = new System.Windows.Forms.Padding(4);
             this.txtDynamic.Name = "txtDynamic";
             this.txtDynamic.Size = new System.Drawing.Size(132, 22);
             this.txtDynamic.TabIndex = 18;
@@ -270,7 +270,7 @@
             this.Controls.Add(this.rbtnOutsourced);
             this.Controls.Add(this.rbtnInHouse);
             this.Controls.Add(this.lblAddPart);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddPartForm";
             this.Text = "Part";
             this.ResumeLayout(false);
