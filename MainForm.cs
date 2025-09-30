@@ -21,6 +21,9 @@ namespace InventorySystem
             dgvParts.DataSource = Inventory.AllParts;
             dgvProducts.DataSource = Inventory.Products;
 
+            dgvProducts.AllowUserToAddRows = false;
+            dgvProducts.ReadOnly = true;
+
             Part screw = new InHouse()
             {
                 Name = "Screw",
@@ -53,7 +56,17 @@ namespace InventorySystem
                 Max = 50,
             };
 
+            Product chair = new Product()
+            {
+                Name = "Chair",
+                Price = 24.99m,
+                InStock = 25,
+                Min = 10,
+                Max = 50,
+            };
+
             Inventory.Products.Add(toolbox);
+            Inventory.Products.Add(chair);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -75,7 +88,7 @@ namespace InventorySystem
                 modifyPartForm.ShowDialog();
                 dgvParts.Refresh();
             }
-            
+
             else
             {
                 MessageBox.Show(this, "Please select a part to modify.");
@@ -86,18 +99,27 @@ namespace InventorySystem
         {
             if (dgvParts.CurrentRow != null && dgvParts.CurrentRow.DataBoundItem is Part partToDelete)
             {
-                var confirmResult = MessageBox.Show(this, "Are you sure you want to delete this part?", "Confirm Delete", MessageBoxButtons.YesNo);
-                if (confirmResult == DialogResult.Yes)
+                var confirm = MessageBox.Show("Are you sure you want to delete this part?",
+                                              "Confirm Delete",
+                                              MessageBoxButtons.YesNo);
+
+                if (confirm == DialogResult.Yes)
                 {
-                    Inventory.DeletePart(partToDelete);
-                }
-                else
-                {
+                    bool deleted = Inventory.DeletePart(partToDelete);
+
+                    if (!deleted)
+                    {
+                        MessageBox.Show("Cannot delete this part because it is associated with a product.");
+                        return;
+                    }
+
+                    dgvParts.Refresh();
+                    dgvParts.ClearSelection();
                 }
             }
             else
             {
-                MessageBox.Show(this, "Please select a part to delete.");
+                MessageBox.Show("Please select a part to delete.");
             }
         }
 
@@ -122,15 +144,15 @@ namespace InventorySystem
                         dgvParts.Rows[rowIndex].Selected = true;
                         return;
                     }
-                   
+
                 }
                 dgvParts.ClearSelection();
                 MessageBox.Show(this, "Part not found.");
-                
+
             }
             else
             {
-                foreach(var part in Inventory.AllParts)
+                foreach (var part in Inventory.AllParts)
                 {
                     if (part.Name.ToLower().Contains(searchTerm))
                     {
@@ -149,6 +171,88 @@ namespace InventorySystem
         {
             AddProductForm addProductForm = new AddProductForm();
             addProductForm.ShowDialog();
+        }
+
+        private void btnModifyProduct_Click(object sender, EventArgs e)
+        {
+            if (dgvProducts.CurrentRow != null && dgvProducts.CurrentRow.DataBoundItem is Product productToModify)
+            {
+                ModifyProductForm modifyProductForm = new ModifyProductForm(productToModify);
+                modifyProductForm.ShowDialog();
+                dgvParts.Refresh();
+            }
+
+            else
+            {
+                MessageBox.Show(this, "Please select a part to modify.");
+            }
+        }
+
+        private void btnDeleteProduct_Click(object sender, EventArgs e)
+        {
+            if (dgvProducts.CurrentRow != null && dgvProducts.CurrentRow.DataBoundItem is Product productToDelete)
+            {
+                if (productToDelete.AssociatedParts.Count > 0)
+                {
+                    MessageBox.Show(this, "Cannot delete a product that has associated parts. Please remove associated parts first.");
+                    return;
+                }
+                var confirmResult = MessageBox.Show(this, "Are you sure you want to delete this product?", "Confirm Delete", MessageBoxButtons.YesNo);
+
+                if (confirmResult == DialogResult.Yes)
+                {
+                    Inventory.RemoveProduct(productToDelete.ProductID);
+                    dgvProducts.Refresh();
+                    dgvProducts.ClearSelection();
+                }   
+                else
+                {
+                }
+            }
+        }
+
+        private void btnSearchProducts_Click(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearchProducts.Text.Trim().ToLower();
+
+            if (txtSearchProducts.Text == "")
+            {
+                MessageBox.Show(this, "Please enter a search term.");
+                return;
+            }
+
+            if (int.TryParse(searchTerm, out int productID))
+            {
+                foreach (var product in Inventory.Products)
+                {
+                    if (product.ProductID == productID)
+                    {
+                        dgvProducts.ClearSelection();
+                        int rowIndex = Inventory.Products.IndexOf(product);
+                        dgvProducts.Rows[rowIndex].Selected = true;
+                        return;
+                    }
+
+                }
+                dgvProducts.ClearSelection();
+                MessageBox.Show(this, "Product not found.");
+
+            }
+            else
+            {
+                foreach (var product in Inventory.Products)
+                {
+                    if (product.Name.ToLower().Contains(searchTerm))
+                    {
+                        dgvProducts.ClearSelection();
+                        int rowIndex = Inventory.Products.IndexOf(product);
+                        dgvProducts.Rows[rowIndex].Selected = true;
+                        return;
+                    }
+                }
+                dgvProducts.ClearSelection();
+                MessageBox.Show(this, "Product not found.");
+            }
         }
     }
 }

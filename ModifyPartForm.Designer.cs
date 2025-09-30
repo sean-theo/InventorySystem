@@ -200,6 +200,7 @@
             this.rbtnOutsourced.TabIndex = 21;
             this.rbtnOutsourced.Text = "Outsourced";
             this.rbtnOutsourced.UseVisualStyleBackColor = true;
+            this.rbtnOutsourced.CheckedChanged += new System.EventHandler(this.rbtnOutsourced_CheckedChanged);
             // 
             // rbtnInHouse
             // 
@@ -213,6 +214,7 @@
             this.rbtnInHouse.TabStop = true;
             this.rbtnInHouse.Text = "In-House";
             this.rbtnInHouse.UseVisualStyleBackColor = true;
+            this.rbtnInHouse.CheckedChanged += new System.EventHandler(this.rbtnInHouse_CheckedChanged);
             // 
             // lblModifyPart
             // 

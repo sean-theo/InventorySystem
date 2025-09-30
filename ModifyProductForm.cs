@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,20 +10,31 @@ using System.Windows.Forms;
 
 namespace InventorySystem
 {
-    public partial class AddProductForm : Form
+    public partial class ModifyProductForm : Form
     {
-        private Product newProduct = new Product();
-        public AddProductForm()
+        private Product selectedProduct;
+    
+        public ModifyProductForm(Product product)
         {
             InitializeComponent();
+
+           selectedProduct = product;
         }
 
-        private void AddProductForm_Load(object sender, EventArgs e)
+        private void ModifyProductForm_Load(object sender, EventArgs e)
         {
-            dgvAllParts.DataSource = Inventory.AllParts;
-            txtID.Text = newProduct.ProductID.ToString();
+            txtID.Text = selectedProduct.ProductID.ToString();
+            txtName.Text = selectedProduct.Name;
+            txtInventory.Text = selectedProduct.InStock.ToString();
+            txtPrice.Text = selectedProduct.Price.ToString();
+            txtMin.Text = selectedProduct.Min.ToString();
+            txtMax.Text = selectedProduct.Max.ToString();
 
-            dgvAssociatedParts.DataSource = newProduct.AssociatedParts;
+            dgvAllParts.DataSource = Inventory.AllParts;
+            dgvAssociatedParts.DataSource = selectedProduct.AssociatedParts;
+
+            dgvAllParts.ClearSelection();
+            dgvAssociatedParts.ClearSelection();
         }
 
         private void btnAddCandiadatePart_Click(object sender, EventArgs e)
@@ -36,7 +46,8 @@ namespace InventorySystem
             }
 
             Part selectedPart = (Part)dgvAllParts.CurrentRow.DataBoundItem;
-            newProduct.AssociatedParts.Add(selectedPart);
+
+            selectedProduct.AssociatedParts.Add(selectedPart);
             dgvAssociatedParts.Refresh();
         }
 
@@ -62,7 +73,8 @@ namespace InventorySystem
                 return;
             }
 
-            if (!int.TryParse(txtMin.Text, out int min) || !int.TryParse(txtMax.Text, out int max))
+            if (!int.TryParse(txtMin.Text, out int min) ||
+                !int.TryParse(txtMax.Text, out int max))
             {
                 MessageBox.Show(this, "Min and Max must be whole numbers.");
                 return;
@@ -80,13 +92,11 @@ namespace InventorySystem
                 return;
             }
 
-            newProduct.Name = name;
-            newProduct.InStock = inventory;
-            newProduct.Price = price;
-            newProduct.Min = min;
-            newProduct.Max = max;
-
-            Inventory.Products.Add(newProduct);
+            selectedProduct.Name = name;
+            selectedProduct.InStock = inventory;
+            selectedProduct.Price = price;
+            selectedProduct.Min = min;
+            selectedProduct.Max = max;
 
             this.Close();
         }
@@ -140,7 +150,7 @@ namespace InventorySystem
             }
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btnDeleteProduct_Click(object sender, EventArgs e)
         {
             if (dgvAssociatedParts.CurrentRow == null)
             {
@@ -156,7 +166,7 @@ namespace InventorySystem
 
             if (confirm == DialogResult.Yes)
             {
-                newProduct.AssociatedParts.Remove(partToRemove);
+                selectedProduct.AssociatedParts.Remove(partToRemove);
                 dgvAssociatedParts.Refresh();
                 dgvAssociatedParts.ClearSelection();
             }

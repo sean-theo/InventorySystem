@@ -52,10 +52,9 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(16, 11);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Location = new System.Drawing.Point(12, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(416, 31);
+            this.lblTitle.Size = new System.Drawing.Size(335, 25);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Inventory Management System";
             // 
@@ -63,27 +62,24 @@
             // 
             this.lblParts.AutoSize = true;
             this.lblParts.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblParts.Location = new System.Drawing.Point(11, 128);
-            this.lblParts.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblParts.Location = new System.Drawing.Point(8, 104);
             this.lblParts.Name = "lblParts";
-            this.lblParts.Size = new System.Drawing.Size(68, 29);
+            this.lblParts.Size = new System.Drawing.Size(51, 24);
             this.lblParts.TabIndex = 1;
             this.lblParts.Text = "Parts";
             // 
             // txtSearchParts
             // 
-            this.txtSearchParts.Location = new System.Drawing.Point(500, 129);
-            this.txtSearchParts.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearchParts.Location = new System.Drawing.Point(375, 105);
             this.txtSearchParts.Name = "txtSearchParts";
-            this.txtSearchParts.Size = new System.Drawing.Size(343, 22);
+            this.txtSearchParts.Size = new System.Drawing.Size(258, 20);
             this.txtSearchParts.TabIndex = 2;
             // 
             // btnSearchParts
             // 
-            this.btnSearchParts.Location = new System.Drawing.Point(362, 125);
-            this.btnSearchParts.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchParts.Location = new System.Drawing.Point(272, 102);
             this.btnSearchParts.Name = "btnSearchParts";
-            this.btnSearchParts.Size = new System.Drawing.Size(100, 28);
+            this.btnSearchParts.Size = new System.Drawing.Size(75, 23);
             this.btnSearchParts.TabIndex = 3;
             this.btnSearchParts.Text = "Search";
             this.btnSearchParts.UseVisualStyleBackColor = true;
@@ -94,19 +90,17 @@
             this.dgvParts.AllowUserToAddRows = false;
             this.dgvParts.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvParts.Location = new System.Drawing.Point(13, 161);
-            this.dgvParts.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvParts.Location = new System.Drawing.Point(10, 131);
             this.dgvParts.Name = "dgvParts";
             this.dgvParts.RowHeadersWidth = 51;
-            this.dgvParts.Size = new System.Drawing.Size(839, 449);
+            this.dgvParts.Size = new System.Drawing.Size(629, 365);
             this.dgvParts.TabIndex = 4;
             // 
             // btnAddPart
             // 
-            this.btnAddPart.Location = new System.Drawing.Point(488, 630);
-            this.btnAddPart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddPart.Location = new System.Drawing.Point(366, 512);
             this.btnAddPart.Name = "btnAddPart";
-            this.btnAddPart.Size = new System.Drawing.Size(100, 28);
+            this.btnAddPart.Size = new System.Drawing.Size(75, 23);
             this.btnAddPart.TabIndex = 5;
             this.btnAddPart.Text = "Add";
             this.btnAddPart.UseVisualStyleBackColor = true;
@@ -114,10 +108,9 @@
             // 
             // btnDeletePart
             // 
-            this.btnDeletePart.Location = new System.Drawing.Point(752, 630);
-            this.btnDeletePart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeletePart.Location = new System.Drawing.Point(564, 512);
             this.btnDeletePart.Name = "btnDeletePart";
-            this.btnDeletePart.Size = new System.Drawing.Size(100, 28);
+            this.btnDeletePart.Size = new System.Drawing.Size(75, 23);
             this.btnDeletePart.TabIndex = 7;
             this.btnDeletePart.Text = "Delete";
             this.btnDeletePart.UseVisualStyleBackColor = true;
@@ -127,59 +120,55 @@
             // 
             this.lblProducts.AutoSize = true;
             this.lblProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProducts.Location = new System.Drawing.Point(920, 121);
-            this.lblProducts.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProducts.Location = new System.Drawing.Point(690, 98);
             this.lblProducts.Name = "lblProducts";
-            this.lblProducts.Size = new System.Drawing.Size(108, 29);
+            this.lblProducts.Size = new System.Drawing.Size(84, 24);
             this.lblProducts.TabIndex = 8;
             this.lblProducts.Text = "Products";
             // 
             // txtSearchProducts
             // 
-            this.txtSearchProducts.Location = new System.Drawing.Point(1432, 121);
-            this.txtSearchProducts.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearchProducts.Location = new System.Drawing.Point(1074, 98);
             this.txtSearchProducts.Name = "txtSearchProducts";
-            this.txtSearchProducts.Size = new System.Drawing.Size(343, 22);
+            this.txtSearchProducts.Size = new System.Drawing.Size(258, 20);
             this.txtSearchProducts.TabIndex = 9;
             // 
             // btnSearchProducts
             // 
-            this.btnSearchProducts.Location = new System.Drawing.Point(1297, 118);
-            this.btnSearchProducts.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchProducts.Location = new System.Drawing.Point(973, 96);
             this.btnSearchProducts.Name = "btnSearchProducts";
-            this.btnSearchProducts.Size = new System.Drawing.Size(100, 28);
+            this.btnSearchProducts.Size = new System.Drawing.Size(75, 23);
             this.btnSearchProducts.TabIndex = 10;
             this.btnSearchProducts.Text = "Search";
             this.btnSearchProducts.UseVisualStyleBackColor = true;
+            this.btnSearchProducts.Click += new System.EventHandler(this.btnSearchProducts_Click);
             // 
             // dgvProducts
             // 
             this.dgvProducts.AllowUserToDeleteRows = false;
             this.dgvProducts.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProducts.Location = new System.Drawing.Point(913, 161);
-            this.dgvProducts.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvProducts.Location = new System.Drawing.Point(685, 131);
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.RowHeadersWidth = 51;
-            this.dgvProducts.Size = new System.Drawing.Size(862, 449);
+            this.dgvProducts.Size = new System.Drawing.Size(646, 365);
             this.dgvProducts.TabIndex = 11;
             // 
             // btnDeleteProduct
             // 
-            this.btnDeleteProduct.Location = new System.Drawing.Point(1675, 630);
-            this.btnDeleteProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeleteProduct.Location = new System.Drawing.Point(1256, 512);
             this.btnDeleteProduct.Name = "btnDeleteProduct";
-            this.btnDeleteProduct.Size = new System.Drawing.Size(100, 28);
+            this.btnDeleteProduct.Size = new System.Drawing.Size(75, 23);
             this.btnDeleteProduct.TabIndex = 12;
             this.btnDeleteProduct.Text = "Delete";
             this.btnDeleteProduct.UseVisualStyleBackColor = true;
+            this.btnDeleteProduct.Click += new System.EventHandler(this.btnDeleteProduct_Click);
             // 
             // btnModifyPart
             // 
-            this.btnModifyPart.Location = new System.Drawing.Point(618, 630);
-            this.btnModifyPart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModifyPart.Location = new System.Drawing.Point(464, 512);
             this.btnModifyPart.Name = "btnModifyPart";
-            this.btnModifyPart.Size = new System.Drawing.Size(100, 28);
+            this.btnModifyPart.Size = new System.Drawing.Size(75, 23);
             this.btnModifyPart.TabIndex = 13;
             this.btnModifyPart.Text = "Modify";
             this.btnModifyPart.UseVisualStyleBackColor = true;
@@ -187,20 +176,19 @@
             // 
             // btnModifyProduct
             // 
-            this.btnModifyProduct.Location = new System.Drawing.Point(1544, 630);
-            this.btnModifyProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModifyProduct.Location = new System.Drawing.Point(1158, 512);
             this.btnModifyProduct.Name = "btnModifyProduct";
-            this.btnModifyProduct.Size = new System.Drawing.Size(100, 28);
+            this.btnModifyProduct.Size = new System.Drawing.Size(75, 23);
             this.btnModifyProduct.TabIndex = 14;
             this.btnModifyProduct.Text = "Modify";
             this.btnModifyProduct.UseVisualStyleBackColor = true;
+            this.btnModifyProduct.Click += new System.EventHandler(this.btnModifyProduct_Click);
             // 
             // btnAddProduct
             // 
-            this.btnAddProduct.Location = new System.Drawing.Point(1407, 630);
-            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddProduct.Location = new System.Drawing.Point(1055, 512);
             this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(100, 28);
+            this.btnAddProduct.Size = new System.Drawing.Size(75, 23);
             this.btnAddProduct.TabIndex = 15;
             this.btnAddProduct.Text = "Add";
             this.btnAddProduct.UseVisualStyleBackColor = true;
@@ -208,10 +196,9 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(1675, 712);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Location = new System.Drawing.Point(1256, 578);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(100, 28);
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 16;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -219,10 +206,10 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(1825, 752);
+            this.ClientSize = new System.Drawing.Size(1369, 611);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnAddProduct);
             this.Controls.Add(this.btnModifyProduct);
@@ -239,7 +226,6 @@
             this.Controls.Add(this.txtSearchParts);
             this.Controls.Add(this.lblParts);
             this.Controls.Add(this.lblTitle);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "Main Screen";
             this.Load += new System.EventHandler(this.MainForm_Load);
